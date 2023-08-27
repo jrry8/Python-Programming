@@ -1,7 +1,7 @@
 filename = 'PythonCrashCourse/Ch10_FilesAndExceptions/Enchanted April.txt'
 enc = 'utf-8'
 target = 'april'
-with open(filename, 'r', encoding=enc) as file_object:
+with open(filename, encoding=enc) as file_object:
     contents = file_object.read()
     numWords = len(contents.split())
     count = contents.lower().count(target)
