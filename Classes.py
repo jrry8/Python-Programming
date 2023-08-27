@@ -1,3 +1,5 @@
+'Python Crash Course Chapter 9 Exercises'
+
 import typing
 
 class Restaurant():
@@ -76,4 +78,38 @@ print("Login attempts = " + str(dummy.loginAttempts))
 dummy.resetLoginAttempts()
 print("Login attempts = " + str(dummy.loginAttempts))
 
-    
+print('#' * 30)
+
+# parent class must appear before child class
+class IceCreamStand(Restaurant):
+    def __init__(self, flavors=['vanilla', 'chocolate', 'strawberry']):
+        self.flavors = flavors
+
+    def displayFlavors(self):
+        res = "This stand sells "
+        for i in range(len(self.flavors) - 1):
+            res += self.flavors[i] + ', '
+        res += 'and ' + self.flavors[-1] + ' ice cream.'
+        print(res)
+
+myStand = IceCreamStand()
+myStand.displayFlavors()
+
+class Admin(User):
+    def __init__(self):
+        self.privileges = Privileges()
+
+class Privileges():
+    def __init__(self, privileges=['can add post', 'can delete post', 'can ban user']):
+        self.privileges = privileges
+
+    def showPrivileges(self):
+        print('The administrator has the following privileges:')
+        for p in self.privileges:
+            print('\t' + p)
+
+myAdmin = Admin()
+myAdmin.privileges.showPrivileges()
+
+
+
