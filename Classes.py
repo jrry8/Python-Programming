@@ -1,6 +1,15 @@
 'Python Crash Course Chapter 9 Exercises'
 
+'''Styling conventions: (which are not all followed in this file)
+    class names should be capitalized and written in CamelCaps
+    instance and module names should be written in lowercase with underscores btw words
+    write import statements for modules from standard library first
+    add blank line and then import statements for modules you wrote
+'''
+
 import typing
+from random import randint
+
 '''we can import an entire module
    access the classes you need using dot notation'''
 import restaurant
@@ -84,5 +93,24 @@ class Privileges():
 myAdmin = Admin()
 myAdmin.privileges.showPrivileges()
 
+print('#' * 30)
 
+class Dice():
+    def __init__(self, sides: int = 6):
+        self.sides = sides
 
+    def roll(self):
+        print(randint(1, self.sides))
+
+sixDie = Dice()
+print('10 rolls of six sided dice:')
+for _ in range(10):
+    sixDie.roll()
+tenDie = Dice(10)
+print('10 rolls of ten sided dice:')
+for _ in range(10):
+    tenDie.roll()
+twentyDie = Dice(20)
+print('10 rolls of twenty sided dice:')
+for _ in range(10):
+    twentyDie.roll()
