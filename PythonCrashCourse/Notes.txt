@@ -1,0 +1,11 @@
+Styling conventions: 
+    class names should be capitalized and written in CamelCaps
+    instance and module names should be written in lowercase with underscores btw words
+    write import statements for modules from standard library first
+    add blank line and then import statements for modules you wrote
+
+Testing:
+    write tests for the most critical behaviors of your functions and classes
+    but don't aim for full coverage in early projects unless you have a specific reason to do so
+        a test with full coverage includes a full range of unit tests 
+        covering all the possible ways you can use a function
