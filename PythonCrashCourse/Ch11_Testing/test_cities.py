@@ -7,4 +7,8 @@ class TestCityCountry(unittest.TestCase):
         formatted_location = format_location('santiago', 'chile')
         self.assertEqual(formatted_location, 'Santiago, Chile')
 
+    def test_city_country_population(self):
+        formatted_location = format_location('santiago', 'chile', 5000000)
+        self.assertEqual(formatted_location, 'Santiago, Chile - population 5000000')
+
 unittest.main()
