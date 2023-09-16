@@ -1,0 +1,5 @@
+Setting up a Virtual Environment in VSCode on a Windows machine:
+
+1. Open a command prompt terminal. Do not use powershell because its default settings will not allow you to run scripts.
+2. Type the following command to create a new virtual environment: python -m venv <name_of_virtual_environment>
+3. Type the following command to activate the virtual environment: <name_of_virtual_environment>\Scripts\activate
